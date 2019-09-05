@@ -1,1 +1,2 @@
 twython==3.0.0
+fnbr-api==1.1.3
