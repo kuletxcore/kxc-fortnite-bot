@@ -13,7 +13,7 @@ FNBR_KEY = os.environ['FNBR_KEY']
 TWEET_LENGTH = 280
 TWEET_URL_LENGTH = 21
 
-RUN_EVERY_N_SECONDS = 86400 # e.g. 60*5 = tweets every five minutes
+# RUN_EVERY_N_SECONDS = 86400 # e.g. 60*5 = tweets every five minutes
 
 USERS_TO_IGNORE = []
 DO_NOT_FAVORITE_USERS_AGAIN = True
