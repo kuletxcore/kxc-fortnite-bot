@@ -1,7 +1,9 @@
 import os
 import time
+import fnbr
 from random import random
 from twython import Twython
+
 
 CONSUMER_KEY = os.environ['TWITTER_CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['TWITTER_CONSUMER_SECRET']
