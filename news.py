@@ -85,14 +85,13 @@ def get_message(handle):
     """
     Your code goes here!
     """
-
 photo = open('./output/news.png', 'rb')
 tweetStr = "Fortnite Battle Royale News Feed update for "+today.strftime("%m/%d/%y")+"!\n\n[Automatically Posted]"
 
-api = twitter_handle()
-response = api.upload_media(media=photo)
-api.update_status(status=tweetStr, media_ids=[response['media_id']])
-	
+api = twitter_handle()	
+response = api.upload_media(media=photo)	
+api.update_status(status=tweetStr, media_ids=[response['media_id']])	
+
 print("Tweeted: " + tweetStr)
 
 def main():
