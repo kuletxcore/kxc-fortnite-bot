@@ -1,3 +1,4 @@
+#!/bin/sh
 cd ./output
 rm news.png
 rm shop.png
