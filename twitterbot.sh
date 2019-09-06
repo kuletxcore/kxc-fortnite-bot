@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /usr/bin/env node
 cd ./output
 rm news.png
 rm shop.png
