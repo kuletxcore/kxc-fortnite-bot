@@ -11,6 +11,8 @@ OAUTH_TOKEN_SECRET = os.environ['TWITTER_OAUTH_TOKEN_SECRET']
 TWEET_LENGTH = 280
 TWEET_URL_LENGTH = 21
 
+mediafile=open('./output/shop.png', 'rb')
+
 # RUN_EVERY_N_SECONDS = 86400 # e.g. 60*5 = tweets every five minutes
 today = date.today()
 
@@ -85,22 +87,17 @@ def get_message(handle):
     """
     Your code goes here!
     """
-    
-tweetStr = "Fortnite item shop for "+today.strftime("%m/%d/%y")+"!\n\nIf you want to support me, make sure to use code \"KuletXCore\" on the Fortnite Item Shop!\nReally appreciate it!"
-
-handle = twitter_handle()	
-response = handle.upload_media(media=open('./output/shop.png', 'rb'))
-api.update_status(status=tweetStr, media_ids=[response['media_id']])	
-
-print("Tweeted: " + tweetStr)
+    message = 'Fortnite item shop for '+today.strftime("%m/%d/%y")+'!\n\nIf you want to support me, make sure to use code \"KuletXCore\" on the Fortnite Item Shop!\nReally appreciate it!'
+    assert len(message) <= TWEET_LENGTH
+    return message
 
 def main():
     handle = twitter_handle()
     USERS_TO_IGNORE.extend([x['user']['id'] for x in handle.get_favorites()])
     while True:
         message = get_message(handle)
-        print(message)
-        submit_tweet(message, handle)
+        print("Tweeted: " + message)
+        submit_tweet_with_media(message, handle)
         # random_favoriting(['apples', 'oranges'], handle)
         # time.sleep(RUN_EVERY_N_SECONDS)
 
