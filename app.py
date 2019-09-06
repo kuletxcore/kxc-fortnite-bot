@@ -1,6 +1,6 @@
-import os
+#!/usr/bin/env python
+import sys
 import time
-from random import random
 from twython import Twython, TwythonError
 from datetime import date
 
