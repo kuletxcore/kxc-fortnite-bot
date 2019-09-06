@@ -102,7 +102,7 @@ def main():
         print message
         submit_tweet(message, handle)
         # random_favoriting(['apples', 'oranges'], handle)
-        time.sleep(RUN_EVERY_N_SECONDS)
+        # time.sleep(RUN_EVERY_N_SECONDS)
 
 if __name__ == '__main__':
     main()
