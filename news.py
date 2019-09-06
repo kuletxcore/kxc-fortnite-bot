@@ -93,7 +93,7 @@ api = twitter_handle()
 response = api.upload_media(media=photo)
 api.update_status(status=tweetStr, media_ids=[response['media_id']])
 	
-print "Tweeted: " + tweetStr
+print("Tweeted: " + tweetStr)
 
 def main():
     handle = twitter_handle()
