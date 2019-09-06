@@ -1,19 +1,19 @@
 import os
 import time
+import fnbr
 from random import random
 from twython import Twython
-from datetime import date
 
 
 CONSUMER_KEY = os.environ['TWITTER_CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['TWITTER_CONSUMER_SECRET']
 OAUTH_TOKEN = os.environ['TWITTER_OAUTH_TOKEN']
 OAUTH_TOKEN_SECRET = os.environ['TWITTER_OAUTH_TOKEN_SECRET']
+FNBR_KEY = os.environ['FNBR_KEY']
 TWEET_LENGTH = 280
 TWEET_URL_LENGTH = 21
 
 # RUN_EVERY_N_SECONDS = 86400 # e.g. 60*5 = tweets every five minutes
-today = date.today()
 
 USERS_TO_IGNORE = []
 DO_NOT_FAVORITE_USERS_AGAIN = True
@@ -23,6 +23,27 @@ def twitter_handle():
 
 def favorite_tweet(tweet, handle):
     handle.create_favorite(id=tweet['id'])
+
+def random_favoriting(keywords, handle, favorite_probability=0.2):
+    """
+    keywords is a list, like ['bananas', 'apples', 'oranges']
+
+    n.b. if this function is called every N seconds
+        then you can expect to favorite a tweet
+        once every N/favorite_probability seconds
+    """
+	for keyword in keywords:
+        xs = handle.search(q=keyword)
+        ts = [x for x in xs['statuses']]
+        if DO_NOT_FAVORITE_USERS_AGAIN:
+            ts = [x for x in ts if x['user']['id'] not in USERS_TO_IGNORE]
+        if ts:
+            if random() < favorite_probability: 
+                print 'Favoriting: ' + ts[0]['text']
+                favorite_tweet(ts[0], handle)
+                if DO_NOT_FAVORITE_USERS_AGAIN:
+                    USERS_TO_IGNORE.append(ts[0]['user']['id'])
+                return
 
 def get_urls_of_media_in_tweet(tweet):
     """
@@ -86,15 +107,9 @@ def get_message(handle):
     """
     Your code goes here!
     """
-
-photo = open('./output/shop.png', 'rb')
-tweetStr = "Fortnite item shop for "+today.strftime("%m/%d/%y")+"!\n\nIf you want to support me, make sure to use code \"KuletXCore\" on the Fortnite Item Shop!\nReally appreciate it!"
-
-api = twitter_handle()
-response = api.upload_media(media=photo)
-api.update_status(status=tweetStr, media_ids=[response['media_id']])
-	
-print "Tweeted: " + tweetStr
+    message = 'I TWEET THIS.'
+    assert len(message) <= TWEET_LENGTH
+    return message
 
 def main():
     handle = twitter_handle()
