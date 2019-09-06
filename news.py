@@ -2,7 +2,7 @@ import os
 import time
 from random import random
 from twython import Twython
-
+from datetime import date
 
 CONSUMER_KEY = os.environ['TWITTER_CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['TWITTER_CONSUMER_SECRET']
@@ -85,13 +85,14 @@ def get_message(handle):
     """
     Your code goes here!
     """
-photo = open('./output/shop.png', 'rb')	    
-tweetStr = "Fortnite item shop for "+today.strftime("%m/%d/%y")+"!\n\nIf you want to support me, make sure to use code \"KuletXCore\" on the Fortnite Item Shop!\nReally appreciate it!"
 
-api = twitter_handle()	
-response = api.upload_media(media=photo)	
-api.update_status(status=tweetStr, media_ids=[response['media_id']])	
+photo = open('./output/news.png', 'rb')
+tweetStr = "Fortnite Battle Royale News Feed update for "+today.strftime("%m/%d/%y")+"!\n\n[Automatically Posted]"
 
+api = twitter_handle()
+response = api.upload_media(media=photo)
+api.update_status(status=tweetStr, media_ids=[response['media_id']])
+	
 print "Tweeted: " + tweetStr
 
 def main():
@@ -102,7 +103,7 @@ def main():
         print message
         submit_tweet(message, handle)
         # random_favoriting(['apples', 'oranges'], handle)
-        time.sleep(RUN_EVERY_N_SECONDS)
+        # time.sleep(RUN_EVERY_N_SECONDS)
 
 if __name__ == '__main__':
     main()
