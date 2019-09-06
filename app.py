@@ -99,7 +99,7 @@ def main():
     USERS_TO_IGNORE.extend([x['user']['id'] for x in handle.get_favorites()])
     while True:
         message = get_message(handle)
-        print message
+        print(message)
         submit_tweet(message, handle)
         # random_favoriting(['apples', 'oranges'], handle)
         # time.sleep(RUN_EVERY_N_SECONDS)
