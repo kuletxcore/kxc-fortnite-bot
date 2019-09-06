@@ -11,7 +11,7 @@ OAUTH_TOKEN_SECRET = os.environ['TWITTER_OAUTH_TOKEN_SECRET']
 TWEET_LENGTH = 280
 TWEET_URL_LENGTH = 21
 
-mediafile=open('./output/shop.png', 'rb')
+mediafile=('./output/shop.png')
 
 # RUN_EVERY_N_SECONDS = 86400 # e.g. 60*5 = tweets every five minutes
 today = date.today()
@@ -58,7 +58,7 @@ def submit_tweet_with_media(message, mediafile, tweet_to_reply=None, handle=None
     """
     if not handle:
         handle = twitter_handle()
-    media_ids = handle.upload_media(media=open(mediafile))
+    media_ids = handle.upload_media(media=open(mediafile, 'rb'))
     if tweet_to_reply is None:
         handle.update_status(status=message,
             media_ids=media_ids['media_id'])
