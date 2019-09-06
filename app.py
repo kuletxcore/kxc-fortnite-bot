@@ -89,8 +89,8 @@ def get_message(handle):
 tweetStr = "Fortnite item shop for "+today.strftime("%m/%d/%y")+"!\n\nIf you want to support me, make sure to use code \"KuletXCore\" on the Fortnite Item Shop!\nReally appreciate it!"
 
 handle = twitter_handle()	
-	response = handle.upload_media(media=open('./output/shop.png', 'rb'))
-		api.update_status(status=tweetStr, media_ids=[response['media_id']])	
+response = handle.upload_media(media=open('./output/shop.png', 'rb'))
+api.update_status(status=tweetStr, media_ids=[response['media_id']])	
 
 print("Tweeted: " + tweetStr)
 
