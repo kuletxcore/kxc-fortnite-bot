@@ -8,3 +8,4 @@ curl "http://api2.nitestats.com/v1/itemshop?background=https://raw.githubusercon
 cd ..
 python app.py
 python news.py
+exit
