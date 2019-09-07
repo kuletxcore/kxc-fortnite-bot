@@ -1,5 +1,5 @@
 #! /bin/bash
-cd ./output
+cd output
 rm news.png
 rm shop.png
 sleep 15
