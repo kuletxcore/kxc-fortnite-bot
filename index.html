@@ -1,5 +1,9 @@
 <?php
-
+if (isset($_POST['update']))
+{
+    exec("/usr/bin/python3 /var/www/python_test.py $input_val"); 
+}
+ 
 ?>
 <html>
 <head></head>
