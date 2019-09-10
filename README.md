@@ -31,10 +31,6 @@ Instructions
         - Check _"Allow this application to be used to Sign in with Twitter"_
     * Under _Details_:
         - Click _"Create My Access Token"_
-    * Connect this app to your bot's twitter acount (help [here](http://dghubble.com/blog/posts/twitter-app-write-access-and-bots/))
-        - `$ gem install twurl`
-        - `$ twurl authorize --consumer-key "REPLACE_THIS" --consumer-secret "REPLACE_THIS"`
-    * When `twurl` asks you to go to a url to log-in, now use the bot account you just created.
 
 4. Create an `.env` file containing your twitter keys.
     * `twurl` generated some keys for your new bot account. You can find these in `~/.twurlrc`.
