@@ -19,7 +19,7 @@ def twitter_handle():
     return Twython(CONSUMER_KEY, CONSUMER_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 photo = open('./output/news.png', 'rb')
-tweetStr = "Fortnite Battle Royale News Feed update for "+today.strftime("%m/%d/%y")+"!\n\n[Automatically Posted]"
+tweetStr = "Fortnite Battle Royale News Feed update for "+today.strftime("%m/%d/%y")+','+today.strftime("%I:%M %p")+", PHT/GMT+8\n\n[Automatically Posted]"
 
 api = twitter_handle()
 response = api.upload_media(media=photo)	
