@@ -1,2 +1,2 @@
 twython==3.7.0
-pip install pytz==2019.2
+pip install pytz==2019.1
