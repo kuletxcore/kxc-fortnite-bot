@@ -17,7 +17,7 @@ def twitter_handle():
     return Twython(CONSUMER_KEY, CONSUMER_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 photo = open('./output/SAC_Reminder.png', 'rb')
-tweetStr = "Weekly Reminder that FN codes expire every Fortnight! (aka 14 days!) :D\nUse code \"KuletXCore\" in the shop if you want to support me!\n\n[Automatically Posted]"
+tweetStr = "Weekly Reminder that FN codes expire every Fortnight! (aka 14 days!)\nUse code \"KuletXCore\" in the shop if you want to support me!\n\n[Automatically Posted]"
 
 api = twitter_handle()
 response = api.upload_media(media=photo)	
