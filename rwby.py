@@ -17,7 +17,7 @@ def twitter_handle():
     return Twython(CONSUMER_KEY, CONSUMER_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 
-tweetStr = "This bot will post this #RWBY playlist every day until @DonaldMustard watches it, or if an official @FortniteGame x @OfficialRWBY collab/crossover happens.\nhttps://www.youtube.com/playlist?list=PL2Oan_kP2lqq2Kc1_tzbYniNWwklzStG1\n\n[Automatically Posted]"
+tweetStr = "This bot will post this #RWBY playlist every day until @DonaldMustard watches it, if an official @FortniteGame x @OfficialRWBY collab/crossover happens, or until November 2nd, #RWBY7's release date.\nhttps://www.youtube.com/playlist?list=PL2Oan_kP2lqq2Kc1_tzbYniNWwklzStG1\n\n[Automatically Posted]"
 
 api = twitter_handle()
 api.update_status(status=tweetStr)	
