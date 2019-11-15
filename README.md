@@ -43,7 +43,13 @@ Instructions
 __Okay, now here's the fun part:__
 
 5. Personalize your message and background!
-    * Change the ```twitterbot.sh``` file however you please. The default settings have my branding on it, so you may need to replace the ```background``` URL to something different.
+    * Change the ```twitterbot.sh``` URLs. The default settings have my branding on it, so you may need to replace the ```background``` URL to something different.
+         - If you want to create your own backgrounds, please refer to the ```media``` folder for the image size and positioning.
+         - The images I use are ```news.jpg``` and ```nitestats.jpg```. Change them to anything you like.
+         - If you want to have weekly SAC reminders, the image I use is ```SAC_Reminder.png``` on the ```output``` folder.
+    * Change the message and timezone on ```app.py``` and ```news.py```.
+         -  __OPTIONAL__: If you want weekly SAC reminders, change ```sac.py``` as well.
+         - You can also remove the Timezones and its references 
 
 6. Commit and push local changes to Github. Heroku will automatically update the remote files since you have Heroku connected.
     
@@ -52,8 +58,7 @@ __Okay, now here's the fun part:__
     * Add a name, and make sure the command is ```bash twitterbot.sh```, and the timezone is UTC.
     * Make it a recurring trigger and select the ```Schedule Helper``` option.
     * Item shop resets every day at 12:00AM UTC. Save the trigger.
-    
-
+      - If you use ```sac.py```, do the same steps. Except this time, you must change the interval to weekly and the time to be Tuesdays at 8:00AM UTC.
 
 Additional Info
 ---------
