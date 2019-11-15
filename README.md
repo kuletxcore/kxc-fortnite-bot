@@ -9,7 +9,7 @@ Requirements
 
 Instructions
 --------
-0. Fork and pull this repo.
+0. Fork this repo.
 
 1. Create a new heroku app on the [Heroku Dashboard](https://herokuapp.com/) by clicking on ```New``` and selecting ```New App```.
    * Select your server and confirm its creation.
