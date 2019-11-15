@@ -43,7 +43,7 @@ Instructions
 __Okay, now here's the fun part:__
 
 5. Personalize your message and background!
-    * Change the ```twitterbot.sh``` URLs. The default settings have my branding on it, so you may need to replace the ```background``` URL to something different.
+    * Change the ```twitterbot.sh``` URLs. The default settings have my branding on it, so you may need to replace the ```background``` URL to something different, or remove it entirely.
          - If you want to create your own backgrounds, please refer to the ```media``` folder for the image size and positioning.
          - The images I use are ```news.jpg``` and ```nitestats.jpg```. Change them to anything you like.
          - If you want to have weekly SAC reminders, the image I use is ```SAC_Reminder.png``` on the ```output``` folder.
