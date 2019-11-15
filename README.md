@@ -25,7 +25,7 @@ Instructions
 
 3. From your main twitter account (not the one you just created, unless this is your first twitter account!) create a [new twitter app](https://apps.twitter.com).
     * Apply for a Twitter developer account, and select ```Making a bot```. Enter the necessary details and submit your application.
-    * This process may take a while to process, and it may not be instant.
+    * This process may take a while, and it may not be instant.
     * After your application, create a bot by clicking on the ```Create an App``` button.
     * Enter the necessary details.
     * Under _Settings_ / _Application Type_:
