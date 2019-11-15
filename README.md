@@ -15,7 +15,7 @@ Instructions
    * Select your server and confirm its creation.
    * Make sure your Heroku account is connected to your github account via the ```Deploy``` tab.
    * Enable automatic deploys and select your forked repository.
-   * Go to the ```Resources``` tab and make sure that the dyno worker is ___switched off!___ This is important because if it's on, the bot will run and it will spam your twitter timeline with the current item shop and news posts.
+   * Go to the ```Resources``` tab and make sure that the dyno worker is ___switched off!___ This is a very important step on creating this bot, so keep that in mind.
 
 2. Create a [new twitter account](https://twitter.com/). (If you already have one, please use your twitter account instead and skip straight to step 3.)
     * Use your current email to create the account by adding [a tag](http://en.wikipedia.org/wiki/Email_address#Address_tags).
