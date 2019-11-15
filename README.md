@@ -1,4 +1,4 @@
-This is a template for creating your own scheduled fortnite twitter bot using python and heroku.
+This is a template for creating your own scheduled Fortnite Item Shop and BR News twitter bot using python and heroku.
 
 A video tutorial for this is coming with step-by-step details on how to use this repo.
 
