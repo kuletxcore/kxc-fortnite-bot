@@ -14,8 +14,8 @@ Instructions
 1. Create a new heroku app on the [Heroku Dashboard](https://herokuapp.com/) by clicking on ```New``` and selecting ```New App```.
    * Select your server and confirm its creation.
    * Make sure your Heroku account is connected to your github account via the ```Deploy``` tab.
-   * Enable automatic deploys and select your forked repository.
-   * Click on ```Deploy Branch``` to ensure a copy of the repo is saved and ready on heroku.
+   * Enable automatic deploys and select your repository.
+   * Click on ```Deploy Branch``` to ensure a copy of the repo is initialized and ready on heroku.
    * Go to the ```Resources``` tab and make sure that the dyno worker is ___switched off!___ This is a very important step on creating this bot, so keep that in mind.
 
 2. Create a [new twitter account](https://twitter.com/). (If you already have one, please use your twitter account instead and skip straight to step 3.)
@@ -24,7 +24,8 @@ Instructions
     * Confirm the email address associated with this new twitter account.
 
 3. From your main twitter account (not the one you just created, unless this is your first twitter account!) create a [new twitter app](https://apps.twitter.com).
-    * Apply for a Twitter developer account, and select ```Making a bot```
+    * Apply for a Twitter developer account, and select ```Making a bot```. Enter the necessary details and submit your application.
+    * This process may take a while to process, and it may not be instant.
     * After your application, create a bot by clicking on the ```Create an App``` button.
     * Enter the necessary details.
     * Under _Settings_ / _Application Type_:
