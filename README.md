@@ -16,6 +16,7 @@ Instructions
    * Make sure your Heroku account is connected to your github account via the ```Deploy``` tab.
    * Push the changes from your local repository to the Github repo you just forked.
    * Enable automatic deploys and select your forked repository.
+   * Go to the ```Resources``` tab and make sure that the dyno worker is ___switched off!___ This is important because if it's on, the bot will run and it will spam your twitter timeline with the current item shop and news posts.
 
 2. Create a [new twitter account](https://twitter.com/). (If you already have one, please use your twitter account instead and skip straight to step 3.)
     * Use your current email to create the account by adding [a tag](http://en.wikipedia.org/wiki/Email_address#Address_tags).
