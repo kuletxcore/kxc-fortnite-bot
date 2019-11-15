@@ -52,4 +52,4 @@ __Okay, now here's the fun part:__
 
 Additional Info
 ---------
-Please check out the [Nitestats Discord](https://discord.gg/tNmWbBy) for updates on the API. Please redirect all questions about the API to this discord. Thank you!
+Please check out the [Nitestats Discord](https://discord.gg/tNmWbBy) for updates on the API. Please redirect all questions and bug reports about the API to this discord. Thank you!
