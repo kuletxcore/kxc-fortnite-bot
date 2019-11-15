@@ -15,6 +15,7 @@ Instructions
    * Select your server and confirm its creation.
    * Make sure your Heroku account is connected to your github account via the ```Deploy``` tab.
    * Enable automatic deploys and select your forked repository.
+   * Click on ```Deploy Branch``` to ensure a copy of the repo is saved and ready on heroku.
    * Go to the ```Resources``` tab and make sure that the dyno worker is ___switched off!___ This is a very important step on creating this bot, so keep that in mind.
 
 2. Create a [new twitter account](https://twitter.com/). (If you already have one, please use your twitter account instead and skip straight to step 3.)
