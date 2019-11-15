@@ -11,10 +11,8 @@ Instructions
 --------
 0. Fork and pull this repo.
 
-1. In your local repo, create a new heroku app.
-    * ```heroku create --stack cedar```
-    * ```heroku apps:rename YOUR_APP_NAME```
-    * Your heroku app will now keep the python script ```app.py``` running as often as possible.
+1. Create a new heroku app on the [Heroku Dashboard](https://herokuapp.com/) by clicking on ```New``` and selecting ```New App```.
+   * Select your server and 
 
 2. Create a [new twitter account](https://twitter.com/). (If you already have one, please use your twitter account instead and skip straight to step 3.)
     * Use your current email to create the account by adding [a tag](http://en.wikipedia.org/wiki/Email_address#Address_tags).
@@ -33,10 +31,10 @@ Instructions
     * In your local repo, create a file called ```.env```, and then copy everything from [this paste](https://pastebin.com/PxJnKrFq)
     * Replace the placeholders with your credentials. You can only view it once on the twitter page until you close it, so copy everything to the ```.env``` file.
     * For [heroku](https://devcenter.heroku.com/articles/config-vars), use ```heroku-config``` to copy contents of ```.env``` to your heroku app.
+        - Configure your heroku app by launching ```heroku git:remote -a [insert your herokua app name here]``` on the folder of your cloned Github repo.
         - Install heroku-config: ```heroku plugins:install heroku-config```.
         - Now run ```heroku config:push```.
             - NOTE: To update heroku environment variables later, run ```heroku config:push --overwrite```
-            - Alternatively, add heroku environment variables manually using ```heroku config:set YOUR_ENV_VAR=replace_this```
 
 __Okay, now here's the fun part:__
 
