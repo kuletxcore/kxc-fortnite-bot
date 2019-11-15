@@ -14,7 +14,6 @@ Instructions
 1. Create a new heroku app on the [Heroku Dashboard](https://herokuapp.com/) by clicking on ```New``` and selecting ```New App```.
    * Select your server and confirm its creation.
    * Make sure your Heroku account is connected to your github account via the ```Deploy``` tab.
-   * Push the changes from your local repository to the Github repo you just forked.
    * Enable automatic deploys and select your forked repository.
    * Go to the ```Resources``` tab and make sure that the dyno worker is ___switched off!___ This is important because if it's on, the bot will run and it will spam your twitter timeline with the current item shop and news posts.
 
