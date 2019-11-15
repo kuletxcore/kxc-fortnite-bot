@@ -12,7 +12,10 @@ Instructions
 0. Fork and pull this repo.
 
 1. Create a new heroku app on the [Heroku Dashboard](https://herokuapp.com/) by clicking on ```New``` and selecting ```New App```.
-   * Select your server and 
+   * Select your server and confirm its creation.
+   * Make sure your Heroku account is connected to your github account via the ```Deploy``` tab.
+   * Push the changes from your local repository to the Github repo you just forked.
+   * Enable automatic deploys and select your forked repository.
 
 2. Create a [new twitter account](https://twitter.com/). (If you already have one, please use your twitter account instead and skip straight to step 3.)
     * Use your current email to create the account by adding [a tag](http://en.wikipedia.org/wiki/Email_address#Address_tags).
@@ -39,10 +42,7 @@ Instructions
 
 __Okay, now here's the fun part:__
 
-5. Commit and push local changes to heroku and github.
-    * Make sure your Heroku account is connected to your github account via the ```Deploy``` tab.
-    * Push the changes from your local repository to the Github repo you just forked using Github desktop
-    * Enable automatic deploys and select your forked repository.
+5. Commit and push local changes to Github. Heroku will automatically update the remote files since you have Heroku connected.
     
 6. Go to the ```Resources``` tab and add the ```Advanced Scheduler``` add-on.
     * Click on it, and create a new trigger.
