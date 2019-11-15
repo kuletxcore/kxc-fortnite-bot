@@ -48,6 +48,7 @@ __Okay, now here's the fun part:__
          - If you want to create your own backgrounds, please refer to the ```media``` folder for the image size and positioning.
          - The images I use are ```news.jpg``` and ```nitestats.jpg```. Change them to anything you like.
             - If you want to have weekly SAC reminders, the image I use is ```SAC_Reminder.png``` on the ```output``` folder.
+         - To get the Image URL, go to the image you uploaded on your github repo and press the ```Raw``` button.
     * Change the message and timezone on ```app.py``` and ```news.py```.
          -  __OPTIONAL__: If you want weekly SAC reminders, change ```sac.py``` as well.
          - You can also remove the Timezones and its references if you don't want the time on your tweets.
