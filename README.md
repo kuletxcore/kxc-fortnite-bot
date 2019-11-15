@@ -53,7 +53,7 @@ __Okay, now here's the fun part:__
 
 6. Commit and push local changes to Github. Heroku will automatically update the remote files since you have Heroku connected.
     
-7. Go to the ```Resources``` tab and add the ```Advanced Scheduler``` add-on.
+7. On your Heroku app dashboard, go to the ```Resources``` tab and add the ```Advanced Scheduler``` add-on.
     * Click on it, and create a new trigger.
     * Add a name, and make sure the command is ```bash twitterbot.sh```, and the timezone is UTC.
     * Make it a recurring trigger and select the ```Schedule Helper``` option.
