@@ -49,7 +49,7 @@ __Okay, now here's the fun part:__
          - If you want to have weekly SAC reminders, the image I use is ```SAC_Reminder.png``` on the ```output``` folder.
     * Change the message and timezone on ```app.py``` and ```news.py```.
          -  __OPTIONAL__: If you want weekly SAC reminders, change ```sac.py``` as well.
-         - You can also remove the Timezones and its references 
+         - You can also remove the Timezones and its references if you don't want the time on your tweets.
 
 6. Commit and push local changes to Github. Heroku will automatically update the remote files since you have Heroku connected.
     
