@@ -1,15 +1,11 @@
-This is a template for creating your own twitter bot using python and heroku. The only programming necessary is to update the function ```get_message()``` in ```app.py``` to create your bot's tweets.
+This is a template for creating your own scheduled fortnite twitter bot using python and heroku.
 
-Also, if you'd like to randomly favorite other users' tweets by keyword search, uncoment the call to `random_favoriting()` in `main()`, and change the keywords to those you'd like to search for.
-
-Confused? Try reading [this](http://tinysubversions.com/2013/09/how-to-make-a-twitter-bot/). Or contact me [@jehosafet](https://twitter.com/jehosafet).
+A video tutorial for this is coming with step-by-step details on how to use this repo.
 
 Requirements
 --------
-* __python__
-   * Install [Twython](https://github.com/ryanmcgrath/twython) (```pip install Twython```): _for generating/posting tweets in python app_
 * __heroku__
-   * [account](https://www.heroku.com/) and [toolbelt](https://toolbelt.heroku.com/): _for hosting python app and keeping it running_
+   * [account](https://www.heroku.com/) and [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install): _for hosting python app and keeping it running_
 
 Instructions
 --------
@@ -20,29 +16,22 @@ Instructions
     * ```heroku apps:rename YOUR_APP_NAME```
     * Your heroku app will now keep the python script ```app.py``` running as often as possible.
 
-2. Create a [new twitter account](https://twitter.com/).
+2. Create a [new twitter account](https://twitter.com/). (If you already have one, please use your twitter account instead and skip straight to step 3.)
     * Use your current email to create the account by adding [a tag](http://en.wikipedia.org/wiki/Email_address#Address_tags).
        - Ex: _email@gmail.com_ => _email+twitterbot@gmail.com_
     * Confirm the email address associated with this new twitter account.
 
-3. From your main twitter account (not the one you just created, unless this is your first twitter account!) create a [new twitter app](https://dev.twitter.com/apps).
+3. From your main twitter account (not the one you just created, unless this is your first twitter account!) create a [new twitter app](https://apps.twitter.com).
+    * Apply for a Twitter developer account, and select ```Making a bot```
+    * After your application, create a bot by clicking on the ```
     * Under _Settings_ / _Application Type_:
         - Enable _"Read and Write"_
-        - Check _"Allow this application to be used to Sign in with Twitter"_
     * Under _Details_:
         - Click _"Create My Access Token"_
-    * Connect this app to your bot's twitter acount (help [here](http://dghubble.com/blog/posts/twitter-app-write-access-and-bots/))
-        - `$ gem install twurl`
-        - `$ twurl authorize --consumer-key "REPLACE_THIS" --consumer-secret "REPLACE_THIS"`
-    * When `twurl` asks you to go to a url to log-in, now use the bot account you just created.
 
 4. Create an `.env` file containing your twitter keys.
-    * `twurl` generated some keys for your new bot account. You can find these in `~/.twurlrc`.
-    * In your local repo, create a file called ```.env``` that contains these twitter app keys, one per line:
-        - ```TWITTER_CONSUMER_KEY=replace_this```
-        - ```TWITTER_CONSUMER_SECRET=replace_this```
-        - ```TWITTER_OAUTH_TOKEN=replace_this```
-        - ```TWITTER_OAUTH_TOKEN_SECRET=replace_this```
+    * In your local repo, create a file called ```.env```, and then copy everything from [this paste](https://pastebin.com/PxJnKrFq)
+    * Replace the placeholders with your credentials. You can only view it once on the twitter page until you close it, so copy everything to the ```.env``` file.
     * For [heroku](https://devcenter.heroku.com/articles/config-vars), use ```heroku-config``` to copy contents of ```.env``` to your heroku app.
         - Install heroku-config: ```heroku plugins:install heroku-config```.
         - Now run ```heroku config:push```.
@@ -51,13 +40,15 @@ Instructions
 
 __Okay, now here's the fun part:__
 
-5. Update the function ```get_message()``` in ```app.py``` to create your bot's tweets.
-    * Read about [twitter bot etiquette](http://tinysubversions.com/2013/03/basic-twitter-bot-etiquette/) for bot guidelines.
-    * Use the [wordnik api](https://github.com/wordnik/wordnik-python) for getting random parts of speech.
+5. Commit and push local changes to heroku and github.
+    * Make sure your Heroku account is connected to your github account via the ```Deploy``` tab.
+    * Push the changes from your local repository to the Github repo you just forked using Github desktop
+    * Enable automatic deploys and select your forked repository.
+    
+6. Go to the ```Resources``` tab and add the ```Advanced Scheduler``` add-on.
+    * Click on it, and create a new trigger.
+    * Add a name, and make sure the command is ```bash twitterbot.sh```, and the timezone is UTC.
+    * Make it a recurring trigger and select the ```Schedule Helper``` option.
+    * Item shop resets every day at 12:00AM UTC. Save the trigger.
 
-6. Test your bot locally.
-    * Running ```foreman start``` should generate your tweets once every minute, or at whatever rate you set in ```app.py```.
-
-7. Commit and push local changes to heroku and github.
-    * ```git push heroku master``` pushes all commits to heroku and starts up your app.
-    * Your bot should now tweet as long as your heroku app is running (via the worker dyno).
+# And then you are done!
