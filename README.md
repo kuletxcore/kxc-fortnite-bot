@@ -50,4 +50,6 @@ __Okay, now here's the fun part:__
     * Make it a recurring trigger and select the ```Schedule Helper``` option.
     * Item shop resets every day at 12:00AM UTC. Save the trigger.
 
-# And then you are done!
+Additional Info
+---------
+Please check out the [Nitestats Discord](https://discord.gg/tNmWbBy) for updates on the API. Please redirect all questions about the API to this discord. Thank you!
