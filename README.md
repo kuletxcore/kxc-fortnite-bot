@@ -67,4 +67,4 @@ Additional Info
 ---------
 Please check out the [Nitestats Discord](https://discord.gg/tNmWbBy) for updates on the API. Please redirect all questions and bug reports about the API to this discord. Thank you!
 
-## If this repo helped you out, Please consider using code "KuletXCore" on the Fortnite item shop, on Battle Breakers or on the Epic Games Store! :)
+## If this repo helped you out, Please consider using code "KuletXCore" on the Fortnite item shop or on the Epic Games Store! :)
