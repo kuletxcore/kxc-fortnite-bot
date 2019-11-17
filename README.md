@@ -37,7 +37,7 @@ Instructions
     * In your local repo, create a file called ```.env```, and then copy everything from [this paste](https://pastebin.com/PxJnKrFq)
     * Replace the placeholders with your credentials. You can only view it once on the twitter page until you close it, so copy everything to the ```.env``` file.
     * For [heroku](https://devcenter.heroku.com/articles/config-vars), use ```heroku-config``` to copy contents of ```.env``` to your heroku app.
-        - Configure your heroku app by launching ```heroku git:remote -a [insert your herokua app name here]``` on the folder of your cloned Github repo.
+        - Configure your heroku app by launching ```heroku git:remote -a [insert your heroku app name here]``` on the folder of your cloned Github repo.
         - Install heroku-config: ```heroku plugins:install heroku-config```.
         - Now run ```heroku config:push```.
             - NOTE: To update heroku environment variables later, run ```heroku config:push --overwrite```
