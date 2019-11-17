@@ -19,7 +19,7 @@ Instructions
    * Go to the ```Resources``` tab and make sure that the dyno worker is ___switched off!___ This is a very important step on creating this bot, so keep that in mind.
 
 2. __Verify your Heroku account__
-   * This is needed because of Heroku's requirements.
+   * This is needed because of Heroku's requirements, and you need to verify your acccount if you want to use add-ons, which is required for this program.
    * Go to [this page](http://heroku.com/verify) and enter your credit card details
       - Don't worry! Your card will never be charged for this program and will only serve as Verification of your Heroku account.
    * You do not need a paid plan for this. I use the free version of Heroku since we'll only use this once or twice a day.
