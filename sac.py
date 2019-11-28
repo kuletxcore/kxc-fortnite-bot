@@ -20,7 +20,7 @@ def twitter_handle():
 photo = open('./output/SAC_Reminder.png', 'rb')
 
 #Change the text into anything you like!
-tweetStr = "Weekly Reminder that FN codes expire every Fortnight! (aka 14 days!)\nUse code \"KuletXCore\" in the shop if you want to support me!\n\n[Automatically Posted]"
+tweetStr = "Weekly Reminder that Fortnite codes expire every Fortnight! (aka 14 days!)\nPLEASE USE A SUPPORT-A-CREATOR CODE! It doesn’t have to be me, just a creator you really like. \nBut if you would like to support me use code \"KuletXCore\" in the Item shop! Thank you!\n\n[Automatically Posted]"
 
 api = twitter_handle()
 response = api.upload_media(media=photo)	
