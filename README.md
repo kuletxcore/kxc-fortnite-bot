@@ -1,3 +1,5 @@
+# HEROKU NO LONGER HAS A FREE OPTION, AND THEREFORE THIS REPOSITORY WILL BE ARCHIVED.
+--------
 This is a template for creating your own scheduled Fortnite Item Shop and BR News twitter bot using python and heroku.
 
 Requirements
